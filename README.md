@@ -38,20 +38,7 @@ model = LogisticRegression(
 model.fit(X_train_scaled, y_train)
 
 accuracy = model.score(X_test_scaled, y_test)
-print(f"Model Accuracy: {accuracy * 100:.2f}%")
-predict-loan/index.ts
-
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-
-serve(async (req) => {
-  const { applicationId } = await req.json();
-  
-  const supabase = createClient(
-    Deno.env.get("SUPABASE_URL"),
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")
-  );
-  
+print(f"Model Accuracy: {accuracy * 100:.2f}%"
   const { data: application } = await supabase
     .from("loan_applications")
     .select("*")
