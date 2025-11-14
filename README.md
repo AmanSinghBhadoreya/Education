@@ -1,7 +1,4 @@
-Education loan easily
-5.4 Machine Learning Model
-5.4.1 Model Architecture
-The system uses Logistic Regression for binary classification (approve/reject).
+
 
 Feature Engineering:
 
